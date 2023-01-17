@@ -5,7 +5,7 @@ import vitePluginCssModules from "vite-plugin-css-modules";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    // react(),
+    react(),
     vitePluginCssModules()
   ]
 })
