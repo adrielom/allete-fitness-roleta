@@ -1,0 +1,9 @@
+.backgroundWrapper {
+    position: relative;
+    .backgroundImage {
+        width: 100vw;
+        height: auto;
+        object-fit: cover;
+        z-index: 1;
+    }
+}
