@@ -1,19 +1,20 @@
 .wrapper {
-    position: relative;
     z-index: 10;
-    height: 100%;
-    width: 100%;
-    background-image: url('./../../assets/svgs/bg-full.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #F0C8F4;
-
-
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    height: 100% !important;
     .title {
         z-index: 10;
         display: grid;
         width: 75%;
-        margin: auto;
+        margin: 0 auto;
         justify-content: center;
         transform: translateY(60px);
         z-index: 10;
@@ -27,15 +28,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-bottom: 2em;
     }
 
     .info {
         z-index: 12;
         height: auto;
         width: 78%;
-        margin: auto;
-        margin-top: 2.5em;
-        margin-bottom: 2.5em !important;
+        margin: 2.5em auto 2.5em auto;
         padding: 2.5em auto;
         border-radius: 2em;
         background-color: #C9E265;
@@ -47,11 +47,7 @@
 
 @media (max-width: 768px) {
     .wrapper {
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
+
         .title {
             transform: translateY(20px);
         }
