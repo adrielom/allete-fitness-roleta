@@ -2,13 +2,40 @@
     position: absolute;
     top: 0;
     z-index: 10;
-    height: 100vh;
-    width: 100vw;
-}
+    height: 100%;
+    width: 100%;
 
-.title {
-    z-index: 10;
-    display: grid;
-    justify-content: center;
-    margin: 5em 3em 0 3em;
+
+    .title {
+        z-index: 10;
+        display: grid;
+        justify-content: center;
+        margin: 5em 3em 0 3em;
+        transform: translateY(60px);
+        z-index: 10;
+    }
+
+    .roulette {
+        z-index: -5;
+        gap: 2em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .info {
+        z-index: 12;
+        height: auto;
+        width: 78%;
+        margin: auto;
+        margin-top: 2.5em;
+        padding: 2.5em auto;
+        border-radius: 2em;
+        background-color: #C9E265;
+        display: flex;
+        align-items: center;
+    }
+
 }
