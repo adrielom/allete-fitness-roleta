@@ -21,6 +21,10 @@ body {
   filter: brightness(0) invert(1);
 }
 
+.nothing{ 
+  
+}
+
 .sc-gsTCUz {
   max-width: 55vw !important;
   max-height: 55vw !important;
