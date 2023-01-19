@@ -1,7 +1,16 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url('./assets/svgs/bg-full.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F0C8F4;
 }
 
 .gTLZXx {
@@ -10,6 +19,10 @@ body {
   right: 25px !important;
   top: 105px !important; */
   filter: brightness(0) invert(1);
+}
+
+.nothing{ 
+  
 }
 
 .sc-gsTCUz {
