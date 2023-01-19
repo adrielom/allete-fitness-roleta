@@ -2,12 +2,15 @@
 	"name": "wheel-project",
 	"private": true,
 	"version": "0.0.0",
+	"homepage": "https://adrielom.github.io/allete-fitness-roleta",
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"preview": "vite preview"
+		"preview": "vite preview",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
+		"gh-pages": "^4.0.0",
 		"react": "^18.2.0",
 		"react-custom-roulette": "^1.2.0",
 		"react-dom": "^18.2.0",
