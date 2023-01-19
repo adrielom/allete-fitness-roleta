@@ -1,16 +1,19 @@
 .wrapper {
-    position: absolute;
-    top: 0;
+    position: relative;
     z-index: 10;
     height: 100%;
     width: 100%;
-
+    background-image: url('./../../assets/svgs/bg-full.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F0C8F4;
 
     .title {
         z-index: 10;
         display: grid;
+        width: 75%;
+        margin: auto;
         justify-content: center;
-        margin: 5em 3em 0 3em;
         transform: translateY(60px);
         z-index: 10;
     }
@@ -31,6 +34,7 @@
         width: 78%;
         margin: auto;
         margin-top: 2.5em;
+        margin-bottom: 2.5em !important;
         padding: 2.5em auto;
         border-radius: 2em;
         background-color: #C9E265;
@@ -38,4 +42,17 @@
         align-items: center;
     }
 
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        .title {
+            transform: translateY(20px);
+        }
+    }
 }

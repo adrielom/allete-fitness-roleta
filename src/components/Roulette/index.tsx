@@ -2,7 +2,7 @@ import React, { HTMLAttributes, useState, useContext } from 'react';
 import { Wheel } from 'react-custom-roulette';
 
 import SpinButton from '../SpinButton';
-import { RouletteContext } from './RouletteContext';
+import { RouletteContext, RouletteMessageInfo } from './RouletteContext';
 
 const PINK = '#FFB0D4';
 const PURPLE = '#AAA0F0';
@@ -82,6 +82,9 @@ type Props = HTMLAttributes<HTMLDivElement> & {};
 export default ({ ...rest }: Props) => {
 	const [mustSpin, setMustSpin] = useState(false);
 	const [prizeNumber, setPrizeNumber] = useState(0);
+	const [messageInfo, setMessageInfo] = useState<RouletteMessageInfo>(
+		{} as RouletteMessageInfo
+	);
 
 	const { setRouletteValue } = useContext(RouletteContext);
 
@@ -90,10 +93,8 @@ export default ({ ...rest }: Props) => {
 		setPrizeNumber(newPrizeNumber);
 		console.log(data[newPrizeNumber].title);
 		setMustSpin(true);
-		setRouletteValue({
-			message: data[newPrizeNumber].message,
-			title: data[newPrizeNumber].title,
-			color: data[newPrizeNumber].color,
+		setMessageInfo({
+			...data[newPrizeNumber],
 		});
 	};
 
@@ -108,6 +109,11 @@ export default ({ ...rest }: Props) => {
 				outerBorderColor={WHITE}
 				onStopSpinning={() => {
 					setMustSpin(false);
+					setRouletteValue({
+						message: messageInfo.message,
+						title: messageInfo.title,
+						color: messageInfo.color,
+					});
 				}}
 			/>
 			<SpinButton onClick={handleSpinClick} disabled={mustSpin} />

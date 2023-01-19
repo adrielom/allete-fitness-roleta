@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 
-type RouletteMessageInfo = {
+export type RouletteMessageInfo = {
 	message: string;
 	color: string;
 	title: string;
@@ -9,6 +9,7 @@ type RouletteMessageInfo = {
 type RouletteContextValue = {
 	rouletteValue: RouletteMessageInfo;
 	setRouletteValue: (value: any) => void;
+	hasPlayed: () => boolean;
 };
 
 export const RouletteContext = createContext<RouletteContextValue>(
@@ -22,8 +23,13 @@ export default function RouletteProvider({ children }: any) {
 		title: '',
 	});
 
+	const hasPlayed = () => {
+		return rouletteValue.title !== '';
+	};
+
 	return (
-		<RouletteContext.Provider value={{ rouletteValue, setRouletteValue }}>
+		<RouletteContext.Provider
+			value={{ rouletteValue, setRouletteValue, hasPlayed }}>
 			{children}
 		</RouletteContext.Provider>
 	);

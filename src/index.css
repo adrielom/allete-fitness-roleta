@@ -1,11 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
 
-.App {
-  background-image: url("./assets/svgs/bg-full.svg");
+body {
+  margin: 0;
+  height: 100vh;
 }
 
 .gTLZXx {
@@ -19,4 +15,8 @@
 .sc-gsTCUz {
   max-width: 55vw !important;
   max-height: 55vw !important;
+}
+
+button {
+  border: none;
 }

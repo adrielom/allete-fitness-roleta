@@ -5,18 +5,21 @@ import styles from './index.module.scss';
 type Props = HTMLAttributes<HTMLDivElement> & {};
 
 export default function Info({ ...rest }: Props) {
-	const { rouletteValue } = useContext(RouletteContext);
+	const { rouletteValue, hasPlayed } = useContext(RouletteContext);
 
 	return (
 		<div
 			{...rest}
 			style={{
 				backgroundColor: rouletteValue.color,
+				marginBottom: '3em',
 			}}>
-			<div className={styles.innerBox}>
-				<h2>{rouletteValue.title}</h2>
-				<p>{rouletteValue.message}</p>
-			</div>
+			{hasPlayed() && (
+				<div className={styles.innerBox}>
+					<h2>{rouletteValue.title}</h2>
+					<p>{rouletteValue.message}</p>
+				</div>
+			)}
 		</div>
 	);
 }

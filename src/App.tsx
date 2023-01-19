@@ -5,7 +5,6 @@ import RouletteProvider from './components/Roulette/RouletteContext';
 function App() {
 	return (
 		<div className='App'>
-			<Background />
 			<RouletteProvider>
 				<Content />
 			</RouletteProvider>
