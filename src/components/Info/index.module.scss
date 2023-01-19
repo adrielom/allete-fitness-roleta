@@ -1,0 +1,35 @@
+.innerBox {
+    width: 97%;
+    height: 90%;
+    border-radius: 1.5em;
+    background-color: white;
+    margin: 1em;
+    font-family: 'Roboto';
+    color: #717172;
+    h2 {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 2rem;;
+    }
+    p {
+        width: 90%;
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 2.5em;
+        line-height: 2rem;
+
+    }
+}
+
+@media (max-width: 768px) {
+    .innerBox {
+        h2 {
+            font-size: 1rem !important;
+        }
+        p {
+            font-size: .85rem !important;
+            line-height: 1.2rem !important;
+        }
+    }
+}

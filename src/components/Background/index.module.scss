@@ -2,8 +2,8 @@
     position: relative;
     .backgroundImage {
         width: 100vw;
-        height: auto;
-        object-fit: cover;
+        height: 100% !important;
+        object-fit: fill;
         z-index: 1;
     }
 }

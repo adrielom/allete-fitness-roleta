@@ -10,7 +10,9 @@ export default function Stars({ image, alt, ...rest }: Props) {
 		<div {...rest}>
 			<img
 				style={{
+					marginTop: '2em',
 					objectFit: 'contain',
+					overflowX: 'hidden',
 				}}
 				src={image}
 				alt={alt}
