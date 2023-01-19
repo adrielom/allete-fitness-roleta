@@ -5,5 +5,5 @@ export default defineConfig({
   base: '/allete-fitness-roleta/',
   plugins: [
     react(),
-  ]
+  ],
 })

@@ -11,6 +11,12 @@ export default function Content() {
 			<Title className={styles.title} titlesvg={titleTextSVG} />
 			<Roulette className={styles.roulette} />
 			<Info className={styles.info} />
+			{/* <div
+				style={{
+					marginBottom: '2em',
+					height: '100px',
+					width: '100%',
+				}}></div> */}
 			{/* <Social /> */}
 		</div>
 	);

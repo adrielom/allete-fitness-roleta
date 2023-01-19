@@ -73,7 +73,7 @@ const data = [
 		style: { backgroundColor: PINK, textColor: WHITE },
 		color: PINK,
 		message:
-			'rosa é força afetiva, emocional, potente e feminina, é pura energia da CRIAÇÃO, fertilidade, amor e PERDÃO. Dentro de nós existe essa força que nos move e acalenta, que nos faz acreditar que somos capazes de qualquer coisa.',
+			'Rosa é força afetiva, emocional, potente e feminina, é pura energia da CRIAÇÃO, fertilidade, amor e PERDÃO. Dentro de nós existe essa força que nos move e acalenta, que nos faz acreditar que somos capazes de qualquer coisa.',
 	},
 ];
 

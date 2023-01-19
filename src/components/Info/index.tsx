@@ -12,13 +12,14 @@ export default function Info({ ...rest }: Props) {
 			{...rest}
 			style={{
 				backgroundColor: rouletteValue.color,
-				marginBottom: '3em',
 			}}>
 			{hasPlayed() && (
-				<div className={styles.innerBox}>
-					<h2>{rouletteValue.title}</h2>
-					<p>{rouletteValue.message}</p>
-				</div>
+				<>
+					<div className={styles.innerBox}>
+						<h2>{rouletteValue.title}</h2>
+						<p>{rouletteValue.message}</p>
+					</div>
+				</>
 			)}
 		</div>
 	);
