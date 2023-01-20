@@ -11,6 +11,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #F0C8F4;
+  height: 100%;
+}
+
+.App {
+  height: fit-content;
+  width: fit-content;
 }
 
 .gTLZXx {
@@ -21,9 +27,6 @@ body {
   filter: brightness(0) invert(1);
 }
 
-.nothing{ 
-  
-}
 
 .sc-gsTCUz {
   max-width: 55vw !important;

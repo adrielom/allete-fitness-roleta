@@ -1,23 +1,22 @@
+import { HTMLAttributes, useContext } from 'react';
 import titleTextSVG from '../../assets/svgs/title.svg';
 import Info from '../Info';
 import Roulette from '../Roulette';
-import Social from '../Social';
+import { RouletteContext } from '../Roulette/RouletteContext';
 import Title from '../Title';
 import styles from './index.module.scss';
 
-export default function Content() {
+type Props = HTMLAttributes<HTMLDivElement>;
+
+export default function Content(props: Props) {
+	const { hasPlayed } = useContext(RouletteContext);
+
 	return (
 		<div className={styles.wrapper}>
 			<Title className={styles.title} titlesvg={titleTextSVG} />
 			<Roulette className={styles.roulette} />
-			<Info className={styles.info} />
-			{/* <div
-				style={{
-					marginBottom: '2em',
-					height: '100px',
-					width: '100%',
-				}}></div> */}
-			{/* <Social /> */}
+			{hasPlayed() && <Info className={styles.info} />}
+			<div className={styles.spacing}></div>
 		</div>
 	);
 }

@@ -9,6 +9,7 @@
     flex-direction: column;
     flex: 1;
     align-items: center;
+    justify-content: space-between;
     height: 100% !important;
     .title {
         z-index: 10;
@@ -29,20 +30,27 @@
         align-items: center;
         flex-direction: column;
         padding-bottom: 2em;
+        flex:1;
     }
 
     .info {
         z-index: 12;
         height: auto;
         width: 78%;
-        margin: 2.5em auto 2.5em auto;
+        margin: auto auto 2.5em auto;
         padding: 2.5em auto;
         border-radius: 2em;
         background-color: #C9E265;
         display: flex;
         align-items: center;
+        flex-grow: 2;
+        flex-basis: 100%;
     }
 
+    .spacing {
+        min-height: 5vh;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
