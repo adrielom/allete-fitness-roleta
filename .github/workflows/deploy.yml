@@ -23,7 +23,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4   # ✅ updated to v4
         with:
           path: dist   # 👈 upload the Vite build folder
 
